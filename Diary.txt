@@ -1,0 +1,37 @@
+04/10 
+-Decided project: LS equation:
+
+The student could follow the lecture notes in Ref 33 that will provide
+all the needed theoretical equipment to deal with the LS equation.
+1. Use the simple potential suggested by M. Hjorth Jensen
+2. Look for scattering solutions, you can find lecture and video
+here34
+3. Look at bound-state solutions, you can find lecture and video
+here35
+4. (Optional) Use realistic potentials (codes will be sent by email).
+With the optional step, the problem could be considered for a two students collaboration project.
+
+M. Hjorth-Jensen. Nuclear structure from nuclei to neutron stars, a. URL https://archive.int.washington.edu/ NNPSS/2000_talks/jensen.pdf; Talent / int course on nuclear forces. URL https://archive.int.washington.edu/
+PROGRAMS/talent13/exercises/TALENT exercises_Monday_1.pdf; C. Johnson.
+A practical introduction to quantum
+scattering theory, and beyond. URL https://github.com/paolofinelli/
+Theoretical- and- Numerical- Nuclear- Physics- Course; andFrib-tasummerschool. URL https://fribtascattering.github.io/
+
+34 R. Landau. Integral equa-
+tions for qm scattering, a. URL http://sites.science.oregonstate. edu/~landaur/Books/CPbook/eBook/
+Lectures/Modules/IntEqn Scatt/
+
+35 R. Landau. Integral equations
+for qm bound states, b. URL http://sites.science.oregonstate. edu/~landaur/Books/CPbook/eBook/
+Lectures/Modules/IntEqn Bound/
+IntEqn Scatt.html
+
+IntEqn Bound.html
+
+
+NUMERICS
+
+-Derivative
+-Differential Equation
+-Integration Techniques
+
