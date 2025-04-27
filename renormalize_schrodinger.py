@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[24]:
+# In[1]:
 
 
 #Radial Schrodinger equation using Numerov method
@@ -36,7 +36,7 @@ def prepare_grid(n_points, x_min, dx):
     return r, sqrt_r, r2
 
 
-# In[25]:
+# In[2]:
 
 
 def init_potential_coulomb(r):
@@ -90,7 +90,7 @@ def init_potential_short(r):
     return v_pot
 
 
-# In[26]:
+# In[3]:
 
 
 def solve_schrodinger(n_points, dx, v_pot, r2, r, sqrt_r, n, l):
@@ -252,7 +252,7 @@ def solve_schrodinger(n_points, dx, v_pot, r2, r, sqrt_r, n, l):
     return e, y, phase_shift
 
 
-# In[27]:
+# In[4]:
 
 
 def analysis(n_max, pot_name, e_n, p_n, y_n, n_points, dx, v_pot, r2 , r, sqrt_r):
@@ -297,7 +297,7 @@ def analysis(n_max, pot_name, e_n, p_n, y_n, n_points, dx, v_pot, r2 , r, sqrt_r
     return e_n, y_n, p_n
 
 
-# In[28]:
+# In[5]:
 
 
 #grid parameters
@@ -352,7 +352,7 @@ plt.show()
 plt.close()
 
 
-# In[29]:
+# In[6]:
 
 
 #initialize potential
@@ -370,7 +370,7 @@ e_short, y_short, ph_shift_short = analysis(
 )
 
 
-# In[30]:
+# In[7]:
 
 
 #lowest-energy data is the one corresponing to n_max = 10
@@ -379,7 +379,7 @@ c = np.sqrt(np.pi) * (e_short[n_max - 1] * np.power(n_max, 3) + n_max)
 print("c = ", c)
 
 
-# In[31]:
+# In[8]:
 
 
 #coulomb eigenvalues in e_theo
@@ -420,7 +420,7 @@ plt.show()
 plt.close()
 
 
-# In[32]:
+# In[9]:
 
 
 def init_potential_effective(r, a, c, d_1):
@@ -460,7 +460,7 @@ def init_potential_effective(r, a, c, d_1):
     return v_pot
 
 
-# In[33]:
+# In[10]:
 
 
 a = [1,2,6,10] #cutoff
@@ -501,13 +501,13 @@ for a_value, color in zip(a, colors):
     result1 = minimize(
     cost_function_1, c_a2, method='nelder-mead',
     args=(a_value, n_points, dx, r2, r, sqrt_r, n_max),
-    options={'maxiter': 10000, 'maxfev': 10000, 'xatol': 1E-8, 'disp': True}
+    options={'maxiter': 10000, 'maxfev': 10000, 'xatol': 1E-8, 'disp': False}
     )
 
     result2 = minimize(
     cost_function_2, init_parameters, method='nelder-mead',
     args=(a_value, n_points, dx, r2, r, sqrt_r, n_max),
-    options={'maxiter': 10000, 'maxfev': 10000, 'xatol': 1E-8, 'disp': True}
+    options={'maxiter': 10000, 'maxfev': 10000, 'xatol': 1E-8, 'disp': False}
     )
 
     c_a2 = result1.x
@@ -632,7 +632,7 @@ for a_value, color in zip(a, colors):
         plt.savefig(f"relative_errors/relative_error_ph_shift_a4.pdf")        
 
 
-# In[34]:
+# In[11]:
 
 
 plt.figure()
