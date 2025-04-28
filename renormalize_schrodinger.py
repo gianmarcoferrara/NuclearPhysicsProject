@@ -210,10 +210,14 @@ def solve_schrodinger(n_points, dx, v_pot, r2, r, sqrt_r, n, l):
             for j in range(0, n_points + 1):
                 y[j] /= norm
 
-            #perturbation theory
+            #improving convergence with perturbation theory
+            
             #find the value of the cusp at the matching point
             j = class_inv
             y_cusp = (y[j - 1] * f[j - 1] + f[j + 1] * y[j + 1] + f[j] * 10. * y[j]) / 12.
+
+            #fcusp is value of f if consider delta term in potential
+            #df = fcusp - f(class_inv)
             df_cusp = f[j] * ((y[j] / y_cusp) - 1.)
 
             # eigenvalue update using perturbation theory
